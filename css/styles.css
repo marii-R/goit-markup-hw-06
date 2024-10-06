@@ -340,11 +340,114 @@ a {
     fill: #f4f4fd;
 }
 
+.hero {
+    width: 100%;
+    margin: 0 auto;
+    padding: 72px 0;
+    background-color: #2e2f42;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+        url(../images/office.jpg/dark-bg-phon1x.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+@media (min-resolution: 192dpi) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+        url(../images/office.jpg/dark-bg-phone2x.jpg);
+    }
+}
 
+.hero-title {
+    max-width: 216px;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+    margin-bottom: 72px;
+
+}
+
+.hero-btn {
+
+    display: flex;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
+    background-color: #4d5ae5;
+    cursor: pointer;
+    border-radius: 4px;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    padding: 16px 32px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+    color: #fff;
+    background: #404bbf;
+}
 
 
 @media screen and (min-width: 768px) {
     .mobile-menu {
         display: none;
+    }
+
+    .hero {
+        width: 100%;
+        margin: 0 auto;
+        padding: 112px 0;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/office.jpg/dark-bg-tablet1x.jpg);
+            
+    }
+        @media (min-resolution: 192dpi) {
+            .hero {
+                background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                        rgba(46, 47, 66, 0.7)),
+                    url(../images/office.jpg/dark-bg-tablet2x.jpg);
+            }
+        }
+    
+    .hero-title {
+            max-width: 496px;
+            font-size: 56px;
+            line-height: 1.07;
+            margin-bottom: 36px;
+    
+    }
+    
+
+}
+@media screen and (min-width: 1158px) {
+    .hero {
+            padding: 188px 0;
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)),
+                url(../images/office.jpg/people-office1x.png);
+    }        
+    
+        @media (min-resolution: 192dpi) {
+            .hero {
+                background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                        rgba(46, 47, 66, 0.7)),
+                    url(../images/office.jpg/people-office2x.png);
+            }
+        }
+    
+    .hero-title {
+            margin-bottom: 48px;
+    
     }
 }
