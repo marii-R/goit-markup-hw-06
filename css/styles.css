@@ -352,7 +352,7 @@ a {
     background-position: center;
     background-size: cover;
 }
-@media (min-resolution: 192dpi) {
+@media screen and (max-width: 767px) and (min-resolution: 192dpi) {
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
@@ -412,13 +412,7 @@ a {
             url(../images/office.jpg/dark-bg-tablet1x.jpg);
             
     }
-        @media (min-resolution: 192dpi) {
-            .hero {
-                background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-                        rgba(46, 47, 66, 0.7)),
-                    url(../images/office.jpg/dark-bg-tablet2x.jpg);
-            }
-        }
+       
     
     .hero-title {
             max-width: 496px;
@@ -430,6 +424,14 @@ a {
     
 
 }
+ @media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+     .hero {
+         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                 rgba(46, 47, 66, 0.7)),
+             url(../images/office.jpg/dark-bg-tablet2x.jpg);
+     }
+ }
+
 @media screen and (min-width: 1158px) {
     .hero {
             padding: 188px 0;
@@ -438,17 +440,19 @@ a {
                 url(../images/office.jpg/people-office1x.png);
     }        
     
-        @media (min-resolution: 192dpi) {
-            .hero {
-                background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-                        rgba(46, 47, 66, 0.7)),
-                    url(../images/office.jpg/people-office2x.png);
-            }
-        }
+        
     
     .hero-title {
             margin-bottom: 48px;
     
+    }
+}
+
+@media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/office.jpg/people-office2x.png);
     }
 }
 /* #endregion Hero */
@@ -628,5 +632,6 @@ a {
         flex-wrap: wrap;
         column-gap: 24px;
     }
-    
 }
+/* #endregion Team*/
+/* #region portfolio */
