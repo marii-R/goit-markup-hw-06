@@ -713,6 +713,7 @@ a {
     column-gap: 24px;
   } 
   .portfolio-cards {
+    box-shadow: none;
     width: calc((100% - 24px) / 2);
   }
 }
