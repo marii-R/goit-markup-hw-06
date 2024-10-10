@@ -910,3 +910,22 @@ a {
     }
 
 }
+@media screen and (min-width:1158px) {
+    .footer {
+        padding: 100px 0;
+    }
+    .section-footer {
+        column-gap: 0;
+        padding: 0 16px;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+    }
+    .subscribe-title {
+        margin: 0;
+    }
+    .social_media {
+        margin-left: 120px;
+        margin-right: 80px;
+    }
+}
