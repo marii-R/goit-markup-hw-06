@@ -34,7 +34,6 @@ closeModalBtn.addEventListener('click', () => {
     modal.classList.remove('is-open');
 });
 
-// Закриття по кліку за межами модального вікна
 modal.addEventListener('click', (event) => {
   if (event.target === modal) {
       modal.classList.remove('is-open');
