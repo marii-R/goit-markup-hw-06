@@ -207,6 +207,7 @@ a {
     position: fixed;
     top: 0;
     left: 0;
+    right: -100%;
     width: 100%;
     height: 100%;
     background-color: #fff;
@@ -223,6 +224,7 @@ a {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    right: 0;
 }
 .mobile-menu-container {
     position: relative;
@@ -341,7 +343,7 @@ a {
 }
 /* #region Hero */
 .hero {
-    width: 100%;
+    max-width: 320px;
     margin: 0 auto;
     padding: 72px 0;
     background-color: #2e2f42;
@@ -404,7 +406,7 @@ a {
     }
 
     .hero {
-        width: 100%;
+        max-width: 768px;
         margin: 0 auto;
         padding: 112px 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
@@ -434,10 +436,11 @@ a {
 
 @media screen and (min-width: 1158px) {
     .hero {
-            padding: 188px 0;
-            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-                    rgba(46, 47, 66, 0.7)),
-                url(../images/office.jpg/people-office1x.png);
+        max-width: 1440px;
+        padding: 188px 0;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/office.jpg/people-office1x.png);
     }        
     
         
@@ -490,7 +493,10 @@ a {
         flex-direction: row;
         flex-wrap: wrap;
         column-gap: 24px;
-        
+    }
+
+    .features-item {
+        text-align:start;
     }
     .features-column {
         width: calc((100% - 24px) / 2);
@@ -560,6 +566,7 @@ a {
     flex-direction: column;
     row-gap:72px;
     justify-content: center;
+    align-items: center;
 }
 
 .team-list-menu {
@@ -603,7 +610,7 @@ a {
     align-items: center;
     flex-direction: row;
     gap: 24px;
-    padding-top: 8px;
+    margin-top: 8px;
 
 }
 .our-team-link:hover,
@@ -751,9 +758,8 @@ a {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
-    display: inline-block;
-    margin-left: 86px;
-    
+    display: block;
+    text-align: center;
 }
 
 .logo-span-footer {
@@ -880,15 +886,17 @@ a {
 
 @media screen and (min-width: 768px) {
     .footer {
-        padding: 96px 92px;
+        padding: 96px 0;
     }
     .section-footer {
         align-items: flex-start;
         justify-content: flex-start;
         column-gap: 24px;
+        padding: 0 108px;
     }
     .logo {
-        margin: 0
+        display: block;
+        text-align: start;
     }
     .footer-ps {
         width: 264px;
@@ -904,10 +912,13 @@ a {
     .footer-input {
         width: 264px;
         margin-right: 24px;
+        margin-bottom: 0;
     }
     .footer-form-subscribe {
         display: flex;
-        align-items: center;
+    }
+    .footer-button {
+        margin-top: 16px;
     }
 
 }
@@ -917,7 +928,7 @@ a {
     }
     .section-footer {
         column-gap: 0;
-        padding: 0 16px;
+        padding: 0 15px;
         align-items: flex-start;
         justify-content: flex-start;
 
@@ -934,16 +945,16 @@ a {
 /* #region backdrop-modal */
 .backdrop {
     position: fixed;
-    top: 0;
+    top: 50%;
+    left: 50%;
     z-index: 9999999;
-    left: 0;
-    width: 100%;
-    height: 100%;
     visibility: hidden;
     opacity: 0;
     background-color: rgba(46, 47, 66, 0.4);
-    
+    width: 100%;
+    height: 100%;
     pointer-events: none;
+    transform: translate(-50%, -50%);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
         visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

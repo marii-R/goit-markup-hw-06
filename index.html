@@ -16,6 +16,7 @@
     rel="stylesheet">
 
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/script.js" defer></script>
 </head>
 
 <!-- #region header -->
@@ -35,21 +36,21 @@
             <li class="contacts-item"><a class="contacts-link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
         </ul>
     </address>
-  <button class="burger-btn" type="button"> <svg class="burger-icon" width="24" height="24">
+  <button class="burger-btn" id="burger-btn" type="button"> <svg class="burger-icon" width="24" height="24">
     <use href="./images/icons.svg#icon-heroicons-solid_menu-1"></use>
    </svg> 
   </button>
 </div>
  
-<div class="mobile-menu ">
+<div class="mobile-menu">
   <div class="container mobile-menu-container">
-      <button type="button" class="mobile-menu-close">
+      <button type="button" class="mobile-menu-close" id="mobile-menu-close">
         <svg class="close-icon" width="8" height="8">
           <use href="./images/icons.svg#icon-Vector"></use>
         </svg>
       </button>
     
-    <nav class="mobile-menu-nav">
+    <nav class="mobile-menu-nav" id="mobile-menu-nav">
       <ul class="navigation">
         <li class="menu-nav"><a class="menu-link-nav" href="">Studio</a></li>
         <li class="menu-nav"><a class="menu-link-nav" href="">Portfolio</a></li>
@@ -115,7 +116,7 @@
             Effective Solutions
             for Your Business
         </h1>
-        <button class="hero-btn" type="button">Order Service</button>
+        <button class="hero-btn" type="button" id="open-modal">Order Service</button>
        </div>
      
     </section>
@@ -650,9 +651,9 @@
 </footer>
 <!-- #endregion footer-->
 <!-- region backdrop-modal-->
- <div class="backdrop">
+ <div class="backdrop " id="backdrop">
   <div class="modal">
-    <button type="button" class="modal-close-btn">
+    <button type="button" class="modal-close-btn" id="close-modal">
       <svg class="close-icon" width="8" height="8">
         <use href="./images/icons.svg#icon-Vector"></use>
       </svg>
